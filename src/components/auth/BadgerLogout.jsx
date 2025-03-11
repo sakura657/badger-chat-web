@@ -1,7 +1,11 @@
-
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import BadgerLoginStatusContext from "../contexts/BadgerLoginStatusContext";
 
 export default function BadgerLogout() {
+
+    const [loginStatus, setLoginStatus] = useContext(BadgerLoginStatusContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('https://cs571api.cs.wisc.edu/rest/s25/hw6/logout', {
@@ -12,6 +16,9 @@ export default function BadgerLogout() {
             credentials: "include"
         }).then(res => res.json()).then(json => {
             // Maybe you need to do something here?
+            alert("You have been logged out!");
+            setLoginStatus(undefined);
+            navigate("/");
         })
     }, []);
 

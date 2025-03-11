@@ -1,5 +1,5 @@
 import React from "react"
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 function BadgerMessage(props) {
 
@@ -11,6 +11,17 @@ function BadgerMessage(props) {
         <br/>
         <i>{props.poster}</i>
         <p>{props.content}</p>
+        {
+            props.userIsOwner && (
+                <Button
+                    variant="danger"
+                    onClick={props.onDelete}
+                    style={{ marginTop: "0.5rem" }}
+                >
+                    Delete Post
+                </Button>
+            )
+        }
     </Card>
 }
 
