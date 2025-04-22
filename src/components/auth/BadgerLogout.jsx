@@ -11,7 +11,7 @@ export default function BadgerLogout() {
         fetch('https://cs571api.cs.wisc.edu/rest/s25/hw6/logout', {
             method: 'POST',
             headers: {
-                "X-CS571-ID": CS571.getBadgerId()
+                "X-CS571-ID": "bid_bcbfe941f59a51e050d18b92d6f5efe7972acdc3b1d49ff70a08881d5cccb254"
             },
             credentials: "include"
         }).then(res => res.json()).then(json => {

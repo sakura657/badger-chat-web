@@ -15,7 +15,7 @@ export default function BadgerChatroom(props) {
     const loadMessages = () => {
         fetch(`https://cs571api.cs.wisc.edu/rest/s25/hw6/messages?chatroom=${props.name}&page=${currentPage}`, {
             headers: {
-                "X-CS571-ID": CS571.getBadgerId()
+                "X-CS571-ID": "bid_bcbfe941f59a51e050d18b92d6f5efe7972acdc3b1d49ff70a08881d5cccb254"
             }
         }).then(res => res.json()).then(json => {
             setMessages(json.messages)
@@ -40,7 +40,7 @@ export default function BadgerChatroom(props) {
             method: "POST",
             credentials: "include",
             headers: {
-                "X-CS571-ID": CS571.getBadgerId(),
+                "X-CS571-ID": "bid_bcbfe941f59a51e050d18b92d6f5efe7972acdc3b1d49ff70a08881d5cccb254",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
@@ -71,7 +71,7 @@ export default function BadgerChatroom(props) {
             method: "DELETE",
             credentials: "include",
             headers: {
-                "X-CS571-ID": CS571.getBadgerId()
+                "X-CS571-ID": "bid_bcbfe941f59a51e050d18b92d6f5efe7972acdc3b1d49ff70a08881d5cccb254"
             }
         })
         .then(res => {

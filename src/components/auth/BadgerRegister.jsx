@@ -33,7 +33,7 @@ export default function BadgerRegister() {
             method: "POST",
             credentials: "include",
             headers: {
-                "X-CS571-ID": CS571.getBadgerId(),
+                "X-CS571-ID": "bid_bcbfe941f59a51e050d18b92d6f5efe7972acdc3b1d49ff70a08881d5cccb254",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
